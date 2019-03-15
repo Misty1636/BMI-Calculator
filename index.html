@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="description" content="BMI計算中心 , 身材一覽無疑!">
+	<meta name="author" content="Su">
+	<meta charset="UTF-8">
+	<meta property="og:type" content="website" />
+  <meta property="og:title" content="快速計算BMI" />
+  <meta property="og:site_name" content="BMI中心" />
+  <meta property="og:description" content="BMI計算 , 了解目前的身材體態!" />
+	<title>BMI中心</title>
+	<link rel="icon" href="img/favicon-orange.ico">
+	<link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+	<div class="header">
+		<div class="header-container adjust">
+			<img class="logo" src="img/BMICLogo.png">
+			<div class="alldata">
+				<label for="height">身高 cm</label>
+				<input type="number" placeholder="請輸入身高"  id="height" class="body-height">
+				<label for="weight">體重 kg</label>
+				<input type="number" placeholder="請輸入體重"  id="weight" class="body-weight">
+			</div>
+			<div class="result"> 
+					<input type="button" value="計算" class="btn">
+					<div class="BMI-outer" style="display: none">
+            <div class="BMI">
+            	<span class="BMI-num"></span>
+            	<small>BMI</small>
+            </div>
+						<a href="#" class="loop-btn">
+							<div class="loop-img">
+								<img src="img/icons_loop.png">
+							</div>
+						</a>
+					</div>
+				<div class="BMI-status" style="display: none">
+					<span class="BMI-result"></span>
+				</div>
+		  </div>
+		</div>	
+	</div>
+
+	<section class="content">
+		<div class="content-container">
+			<h2>BMI 紀錄</h2>
+      <h3><a href="#" class="clearall">清除所有紀錄</a></h3>
+			<ul class="list">
+				<!-- <li>
+					<span class="status">理想</span>
+					<span><small>BMI</small> 20.90</span>
+					<span><small>weight</small>45kg</span>
+					<span><small>height</small>160cm</span>
+					<small>2019-03-06</small>
+					<a href="#">刪除</a>
+				</li>
+				<li>
+					<span class="status">中度肥胖</span>
+					<span><small>BMI</small> 20.90</span>
+					<span><small>weight</small>45kg</span>
+					<span><small>height</small>160cm</span>
+					<small>2019-03-06</small>
+					<a href="#">刪除</a>
+				</li> -->
+			</ul>
+		</div>
+	</section> 
+
+	<footer class="footer">
+		<div class="container footer-logo">
+			<img src="img/BMICLogo-dark.png">
+		</div>
+	</footer>
+	
+	<script src="js/all.js" ></script>
+</body>
+</html>

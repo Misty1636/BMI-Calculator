@@ -1,0 +1,290 @@
+@import "_reset.scss";
+@import "_skill.scss";
+@import "_grid.scss";
+
+@include border-box;
+@include fonts;   
+
+$white: #FFFFFF;
+$dark: #424242;
+$brighter: #FFD366;
+$bright: #FFC22D;
+$green: #86D73F; 
+$sky: #31BAF9;
+$orange-light: #FF982D;
+$orange: #FF6C03;
+$red: #FF1200;
+
+.header{
+	padding: 75px 0;
+	background: $dark;
+	.logo{
+	 max-width: 100%;
+	 height: 100%;
+	 margin-left: 150px;
+	}
+	.adjust{
+		display: flex;
+		align-items: center;
+	}
+}
+.header-container{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.alldata{
+  margin: 0 80px;
+  @include desktop1280{
+  	margin: 0 70px;
+  }
+	label{
+		display: block;
+		color: $brighter;
+		font-size: 20px;
+		margin-bottom: 0.5rem;
+		padding-left: 0.5rem;
+	}
+	input{
+		outline: 0;
+		border: 2px solid $brighter;
+		border-radius: 25px;
+		padding:0.4rem 1rem; 
+		color: $white;
+		background: rgba($white,0.25);
+		font-size: 24px;
+		&:focus{
+			transition: all 0.2s;
+			background: rgba($white,0.35);
+		}
+	}
+	input::-webkit-input-placeholder{
+		color: rgba($white,0.5);
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button{ 
+		-webkit-appearance: none; 
+	}
+	.body-height{
+		margin-bottom: 1.5rem;
+	}
+}
+
+.result{
+	display: flex;
+	.BMI-status{
+		display: flex;
+		align-items: center;
+		color: $green;
+		font-size: 32px;
+		margin-left: 0.5rem;
+	}
+}
+
+.btn{
+	width: 120px;
+	height: 120px;
+	background: $brighter;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: 900;
+	transition: all 0.5s;
+	outline: 0;
+	&:hover{
+		animation: shadow linear 3s infinite;
+	}
+	&:active{
+		background: $bright;
+	}
+}
+.BMI-outer{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	color: $green;
+	border: 6px solid $green;
+  position: relative;
+	.BMI{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  justify-content: center;
+	  span{
+	  	padding-top: 19px;
+	  	font-size: 32px;
+	  	margin-bottom: 5px;
+	  }
+	  small{
+	  	font-size: 14px;
+	  }
+	}
+	.loop-btn{
+		border: 3px solid $dark;
+		width: 36px;
+		height: 36px;
+		display: block;
+		background: $green;
+		border-radius: 50%;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		.loop-img{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s;
+			&:hover{
+			 border: 2px solid #fff;
+		  }
+			img{
+				width: 14px;
+				height: 19px;
+			}
+		}
+	}
+}
+
+
+@keyframes shadow {
+  0% {
+    -webkit-box-shadow: 0 0 0 $white;
+    box-shadow: 0 0 0 $white;
+  }
+
+  10% {
+    -webkit-box-shadow: 0 0 5px $white;
+    box-shadow: 0 0 5px $white;
+  }
+
+  20% {
+    -webkit-box-shadow: 0 0 10px $white;
+    box-shadow: 0 0 10px $white;
+  }
+
+  30% {
+    -webkit-box-shadow: 0 0 15px $white;
+    box-shadow: 0 0 15px $white;
+  }
+
+  40% {
+    -webkit-box-shadow: 0 0 20px $white;
+    box-shadow: 0 0 20px $white;
+  }
+
+  60% {
+    -webkit-box-shadow: 0 0 15px $white;
+    box-shadow: 0 0 15px $white;
+  }
+
+  70% {
+    -webkit-box-shadow: 0 0 10px $white;
+    box-shadow: 0 0 10px $white;
+  }
+
+  80% {
+    -webkit-box-shadow: 0 0 5px $white;
+    box-shadow: 0 0 5px $white;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 $white;
+    box-shadow: 0 0 0 $white;
+  }
+}
+
+.content-container{
+  max-width: 1024px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+.content{
+	padding: 50px 0;
+	background: rgba($dark,0.2);
+	h2{
+		font-size: 24px;
+		text-align: center;
+	}
+	h3{
+		text-align: right;
+		padding: 0 15%;
+		margin: 1rem 0 1.5rem;
+		@include padpro{
+			padding: 0 8%;
+			@include pad{
+			  padding: 0 5%;
+		  }
+		}	
+		.clearall{
+			text-decoration: none;
+			color: $red;
+			border-bottom: 1px solid transparent;
+			transition: all 0.3s;
+			&:hover{
+				border-bottom: 1px solid $red;
+			}
+		}
+	}	
+}
+
+.list{
+	padding: 0 15%;
+	@include padpro{
+		padding: 0 8%;
+		@include pad{
+		  padding: 0 5%;
+	  }
+	}
+	li{
+		width: 100%;
+		margin-bottom: 1rem;
+		padding: 20px;
+		background: $white;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-left: 7px solid $green;
+		@include padpro{
+			padding: 15px;
+		}
+		span{
+      font-size: 20px;
+      display: flex;
+		  align-items: center;
+		}
+		small{
+			font-size: 12px;
+			padding-right: 0.3rem;
+		}
+		.status{
+			width: 85px;
+		}
+		a{
+			text-decoration: none;
+			color: $red;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+
+.footer{
+	padding: 20px 0;
+	background: $brighter;
+	height: 100%;
+	.footer-logo{
+		text-align: center;
+		img{
+			width: 55px;
+			height: 55px;
+		}
+	}
+}
