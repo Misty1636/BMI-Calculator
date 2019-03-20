@@ -12,7 +12,7 @@ function updatedata(data){
 	let allcolors = ''
 	const BMInum = document.querySelector('.BMI-num')
 	const BMIresult = document.querySelector('.BMI-result')
-	for(var i=0; i<data.length; i++){
+	for(let i=0; i<data.length; i++){
    
    switch(array[i].status){ //判斷使用的色碼
    	case '過輕':  
