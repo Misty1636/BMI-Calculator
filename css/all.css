@@ -131,10 +131,7 @@ body {
   border: none;
   cursor: pointer;
   font-size: 24px;
-  font-weight: 900;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  font-weight: bold;
   outline: 0; }
   .btn:hover {
     -webkit-animation: shadow linear 3s infinite;
